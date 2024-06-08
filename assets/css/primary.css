@@ -1,3 +1,9 @@
 body {
     background: gray !important;
 }
+
+.page-wrapper {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    min-width: 100% !important
+}
