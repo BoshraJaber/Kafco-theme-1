@@ -675,3 +675,7 @@ body {
     width: 19px;
     height: 18px;
 }
+
+.header-menu li:first-child a {
+    visibility: hidden
+}
