@@ -679,3 +679,12 @@ body {
 .header-menu li:first-child a {
     visibility: hidden
 }
+
+.wp-block-polylang-language-switcher {
+    padding: 0px !important;
+}
+
+.nav-container {
+    margin-top: 32px;
+
+}
