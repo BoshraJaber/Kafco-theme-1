@@ -656,3 +656,22 @@ body {
     margin-top: auto;
     margin-bottom: auto;
 }
+
+/* Header Component */
+.header-menu {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.header-menu li:first-child {
+    background-image: url("/wp-content/uploads/2024/06/house.png");
+    background-repeat: no-repeat;
+    background-size: 19px 18px;
+    width: 19px;
+    height: 18px;
+}
