@@ -760,6 +760,15 @@ html[lang="ar"] .swiper-slide .wp-block-cover__inner-container {
     margin-bottom: 100px !important;
 }
 
+html[lang="ar"] .swiper-pagination-horizontal {
+    right: 0px !important;
+    margin-right: 100px !important;
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    top: -64px !important;
+}
+
 html,
 footer {
     margin-top: 0px !important;
