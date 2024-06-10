@@ -717,3 +717,18 @@ body {
 .align-items-start {
     align-items: flex-start !important;
 }
+
+.swiper-slide .wp-block-group {
+    margin-left: 0px !important;
+    padding: 0px;
+}
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    top: 0;
+    background-color: transparent;
+    background-image: none !important;
+}
