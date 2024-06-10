@@ -124,6 +124,11 @@
       ],
       "palette": [
         {
+          "slug": "transparent",
+          "color": "transparent",
+          "name": "Transparent"
+        },
+        {
           "color": "#f9f9f9",
           "name": "Base",
           "slug": "base"

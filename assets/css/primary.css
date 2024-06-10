@@ -709,6 +709,10 @@ body {
     text-align: left;
 }
 
+html[lang="ar"] .footer-heading {
+    text-align: right;
+}
+
 /* Utility Classes */
 .gap-0 {
     gap: 0px;
