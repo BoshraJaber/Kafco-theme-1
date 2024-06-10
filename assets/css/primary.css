@@ -764,9 +764,18 @@ html[lang="ar"] .swiper-pagination-horizontal {
     right: 0px !important;
     margin-right: 100px !important;
 }
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev,
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    top: -64px !important;
+}
+
 .swiper-button-next,
 .swiper-rtl .swiper-button-prev {
-    top: -64px !important;
+    right: 0px !important;
+    margin-right: 21px;
 }
 
 html,
