@@ -251,3 +251,42 @@ wp_enqueue_script(
 	true
 );
 }
+
+
+// Register Custom Blocks
+class JSXBlock {
+  function __construct($name, $renderCallback = null, $data = null) {
+    $this->name = $name;
+    $this->data = $data;
+    $this->renderCallback = $renderCallback;
+    add_action('init', [$this, 'onInit']);
+  }
+
+  function ourRenderCallback($attributes, $content) {
+    ob_start();
+    require get_theme_file_path("/our-blocks/{$this->name}.php");
+    return ob_get_clean();
+  }
+
+  function onInit() {
+    wp_register_script($this->name, get_stylesheet_directory_uri() . "/build/{$this->name}.js", array('wp-blocks', 'wp-editor'));
+    
+    if ($this->data) {
+      wp_localize_script($this->name, $this->name, $this->data);
+    }
+
+    $ourArgs = array(
+      'editor_script' => $this->name
+    );
+
+    if ($this->renderCallback) {
+      $ourArgs['render_callback'] = [$this, 'ourRenderCallback'];
+    }
+
+    register_block_type("ourblocktheme/{$this->name}", $ourArgs);
+  }
+}
+new JSXBlock('genericheading');
+new JSXBlock('genericbutton');
+new JSXBlock('kafcotext');
+new JSXBlock('maincontainer', true);
