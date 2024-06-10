@@ -290,4 +290,4 @@ new JSXBlock('genericheading');
 new JSXBlock('genericbutton');
 new JSXBlock('kafcotext');
 new JSXBlock('maincontainer', true);
-new JSXBlock('iconbutton')
+// new JSXBlock('iconbutton')
