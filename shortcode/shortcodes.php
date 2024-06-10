@@ -616,3 +616,5 @@ function awards_certificates_shortcode(){
 }
 add_shortcode('show_awards_certificates','awards_certificates_shortcode');
 
+
+echo "I am alive"

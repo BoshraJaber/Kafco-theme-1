@@ -11,6 +11,10 @@
 
  include get_parent_theme_file_path( 'inc/helpers/helpers.php' );
 
+ include "\shortcode\shortcodes.php";
+
+ require("\shortcode\shortcodes.php")
+
 /**
  * Register block styles.
  */
@@ -290,4 +294,4 @@ new JSXBlock('genericheading');
 new JSXBlock('genericbutton');
 new JSXBlock('kafcotext');
 new JSXBlock('maincontainer', true);
-// new JSXBlock('iconbutton')
+// new JSXBlock('iconbutton');
