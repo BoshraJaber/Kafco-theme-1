@@ -756,6 +756,10 @@ header {
     margin-bottom: 36px !important;
 }
 
+html[lang="ar"] .swiper-slide .wp-block-cover__inner-container {
+    margin-bottom: 100px !important;
+}
+
 html,
 footer {
     margin-top: 0px !important;
