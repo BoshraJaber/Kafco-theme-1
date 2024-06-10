@@ -722,6 +722,10 @@ html[lang="ar"] .footer-heading {
     align-items: flex-start !important;
 }
 
+.dir-rtl {
+    direction: rtl;
+}
+
 .swiper-slide .wp-block-group {
     margin-left: 0px !important;
     padding: 0px;
