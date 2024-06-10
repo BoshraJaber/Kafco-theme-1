@@ -732,3 +732,11 @@ header {
     background-color: transparent;
     background-image: none !important;
 }
+
+.swiper-slide .wp-block-cover__inner-container {
+    margin-bottom: 36px !important;
+}
+
+html {
+    margin-top: 0px !important;
+}
