@@ -416,13 +416,6 @@ body {
     border-radius: 50%;
 }
 
-.side-circle.red {
-    background: #ec1b21;
-}
-
-.side-circle.green {
-    background: #157633;
-}
 
 .btn {
     display: inline-block;
@@ -728,7 +721,7 @@ body {
 }
 
 html[lang="ar"] .footer-heading {
-    text-align: right;
+    text-align: right !important;
 }
 
 /* Utility Classes */
