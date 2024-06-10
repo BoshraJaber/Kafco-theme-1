@@ -696,7 +696,7 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 41px;
+    /* line-height: 41px; */
 }
 
 .footer-heading {
@@ -707,4 +707,9 @@ body {
     font-weight: 600;
     line-height: 41px;
     text-align: left;
+}
+
+/* Utility Classes */
+.gap-0 {
+    gap: 0px;
 }
