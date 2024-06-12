@@ -6,6 +6,11 @@
       "title": "Page No Title"
     },
     {
+      "name": "dashboard-template.html",
+      "postTypes": ["page"],
+      "title": "Dashboard Template"
+    },
+    {
       "name": "page-with-sidebar",
       "postTypes": ["page"],
       "title": "Page with Sidebar"
