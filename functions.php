@@ -11,10 +11,6 @@
 
  include get_parent_theme_file_path( 'inc/helpers/helpers.php' );
 
- include "\shortcode\shortcodes.php";
-
- require("\shortcode\shortcodes.php")
-
 /**
  * Register block styles.
  */
@@ -33,9 +29,6 @@ if ( ! function_exists( 'kafco_custom_theme_1_block_styles' ) ) :
 			array(
 				'name'         => 'arrow-icon-details',
 				'label'        => __( 'Arrow icon', 'kafco-custom-theme-1' ),
-				/*
-				 * Styles for the custom Arrow icon style of the Details block
-				 */
 				'inline_style' => '
 				.is-style-arrow-icon-details {
 					padding-top: var(--wp--preset--spacing--10);
@@ -51,15 +44,12 @@ if ( ! function_exists( 'kafco_custom_theme_1_block_styles' ) ) :
 				}',
 			)
 		);
+
 		register_block_style(
 			'core/post-terms',
 			array(
 				'name'         => 'pill',
 				'label'        => __( 'Pill', 'kafco-custom-theme-1' ),
-				/*
-				 * Styles variation for post terms
-				 * https://github.com/WordPress/gutenberg/issues/24956
-				 */
 				'inline_style' => '
 				.is-style-pill a,
 				.is-style-pill span:not([class], [data-rich-text-placeholder]) {
@@ -74,15 +64,12 @@ if ( ! function_exists( 'kafco_custom_theme_1_block_styles' ) ) :
 				}',
 			)
 		);
+
 		register_block_style(
 			'core/list',
 			array(
 				'name'         => 'checkmark-list',
 				'label'        => __( 'Checkmark', 'kafco-custom-theme-1' ),
-				/*
-				 * Styles for the custom checkmark list block style
-				 * https://github.com/WordPress/gutenberg/issues/51480
-				 */
 				'inline_style' => '
 				ul.is-style-checkmark-list {
 					list-style-type: "\2713";
@@ -93,14 +80,12 @@ if ( ! function_exists( 'kafco_custom_theme_1_block_styles' ) ) :
 				}',
 			)
 		);
+
 		register_block_style(
 			'core/navigation-link',
 			array(
 				'name'         => 'arrow-link',
 				'label'        => __( 'With arrow', 'kafco-custom-theme-1' ),
-				/*
-				 * Styles for the custom arrow nav link block style
-				 */
 				'inline_style' => '
 				.is-style-arrow-link .wp-block-navigation-item__label:after {
 					content: "\2197";
@@ -111,6 +96,7 @@ if ( ! function_exists( 'kafco_custom_theme_1_block_styles' ) ) :
 				}',
 			)
 		);
+
 		register_block_style(
 			'core/heading',
 			array(
@@ -149,7 +135,9 @@ if ( ! function_exists( 'kafco_custom_theme_1_block_styles' ) ) :
 			)
 		);
 	}
+	add_action( 'init', 'kafco_custom_theme_1_block_styles' );
 endif;
+
 
 add_action( 'init', 'kafco_custom_theme_1_block_styles' );
 
