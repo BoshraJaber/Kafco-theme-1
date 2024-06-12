@@ -25,7 +25,7 @@ function kafco_light_box_scripts() {
     wp_enqueue_script( 'kacfo-lightbox-js', get_template_directory_uri() . '/assets/js/light-box.js', array('jquery'), '1.0', true );
 }
 
-
+// testing
 
 
 function latest_news_shortcode(){
