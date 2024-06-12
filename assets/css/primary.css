@@ -793,3 +793,12 @@ html,
 footer {
     margin-top: 0px !important;
 }
+
+@media (max-width: 768px) {
+
+    .drop-reversed {
+        width: 114px !important;
+        height: 114px !important;
+        right:0px !important;
+    }
+}
