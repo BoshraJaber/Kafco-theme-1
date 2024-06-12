@@ -6,7 +6,7 @@
       "title": "Page No Title"
     },
     {
-      "name": "dashboard-template.html",
+      "name": "page-dashboard",
       "postTypes": ["page"],
       "title": "Dashboard Template"
     },
