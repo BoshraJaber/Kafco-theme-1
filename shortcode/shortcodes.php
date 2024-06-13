@@ -86,8 +86,13 @@ add_shortcode('show_latest_news','latest_news_shortcode');
 function latest_news_detail_shortcode(){
 	ob_start();
         $current_language = pll_current_language();
-     
-        $latest_news_data = new WP_Query($args);
+		$memberImg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
+		if($memberImg=="")
+		{
+			$memberImg ="/wp-content/uploads/2022/04/img.png";
+		}
+		$post_id = get_the_ID();
+		
         ?>
        <div class="news_container">
        
