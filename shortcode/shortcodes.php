@@ -85,41 +85,11 @@ add_shortcode('show_latest_news','latest_news_shortcode');
 
 function latest_news_detail_shortcode(){
 	ob_start();
-        $current_language = pll_current_language();
-		$memberImg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
-		if($memberImg=="")
-		{
-			$memberImg ="/wp-content/uploads/2022/04/img.png";
-		}
-		$post_id = get_the_ID();
-		
+      
         ?>
        <div class="news_container">
        
-         <?php if ($latest_news_data->have_posts()) {
-            while ($latest_news_data->have_posts()) {
-                $latest_news_data->the_post();
-				$news_title = get_field( "news_title" );
-				$news_date = get_field( "news_date" );
-				$news_short_description =  get_field( "news_short_description" );
-				$news_full_description =  get_field( "news_full_description" );
-				$news_gallery = get_field( "news_gallery" );
-				?>
-				<div class="news_box">
-						<div class="news_img">
-							<img src="https://dummyimage.com/300x400/23800e/ffffff" alt="img_name">
-						</div>
-						<div class="news_details">
-								<div class="news_date"><?php echo $news_short_description;?></div>
-								<div class="news_title"><?php echo $news_full_description;?></div>
-								<div class="news_short_description"><?php echo $news_gallery;?></div>
-								
-						</div>
-				</div>
-				<?php
-               
-			}
-		 }?>
+         <h2>Hello</h2>
 		</div>
         
         <?php
