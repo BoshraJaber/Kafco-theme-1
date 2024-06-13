@@ -85,11 +85,22 @@ add_shortcode('show_latest_news','latest_news_shortcode');
 
 function latest_news_detail_shortcode(){
 	ob_start();
-      
+			$news_title = get_field( "news_title" );
+			$news_date = get_field( "news_date" );
+			$news_short_description =  get_field( "news_short_description" );
+			$news_full_description =  get_field( "news_full_description" );
+			$news_gallery = get_field( "news_gallery" );
+			$post_id = get_the_ID();
+			$pagelink=  get_permalink($post_id);  
         ?>
        <div class="news_container">
-       
-         <h2>Hello</h2>
+	
+         <h2><?php echo $news_short_description;?></h2>
+		 <p><?php echo $news_date;?></P>
+		 <p><?php echo $news_short_description;?></P>
+		 <p><?php echo $news_full_description;?></P>
+		 <p><?php echo $news_gallery;?></P>
+
 		</div>
         
         <?php
