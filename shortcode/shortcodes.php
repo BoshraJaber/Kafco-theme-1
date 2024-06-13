@@ -51,7 +51,8 @@ function latest_news_shortcode(){
 				$news_short_description =  get_field( "news_short_description" );
 				$news_full_description =  get_field( "news_full_description" );
 				$news_gallery = get_field( "news_gallery" );
-				$pagelink=  get_permalink(get_the_ID());  
+				$post_id = get_the_ID();
+				$pagelink=  get_permalink($post_id);  
 				?>
 				<div class="news_box">
 						<div class="news_img">
@@ -82,17 +83,10 @@ return ob_get_clean();
 add_shortcode('show_latest_news','latest_news_shortcode');
 
 
-function latest_news__detail_shortcode(){
+function latest_news_detail_shortcode(){
 	ob_start();
         $current_language = pll_current_language();
-        $args = array(
-            'post_type'      => 'news',           // Your custom post type name
-            'post_status'    => 'publish',   
-            'posts_per_page' => 8,
-            'lang'           => $current_language,
-            'order' => 'ASC',
-            'orderby' => 'title',     
-       );
+     
         $latest_news_data = new WP_Query($args);
         ?>
        <div class="news_container">
@@ -111,16 +105,10 @@ function latest_news__detail_shortcode(){
 							<img src="https://dummyimage.com/300x400/23800e/ffffff" alt="img_name">
 						</div>
 						<div class="news_details">
-								<div class="news_date"><?php echo $news_date;?></div>
-								<div class="news_title"><?php echo $news_title;?></div>
-								<div class="news_short_description"><?php echo $news_short_description;?></div>
-								<div class="read_more">
-									<a href="">Read More <span>
-										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-											<path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"></path>
-										</svg></span>
-									</a>
-								</div>
+								<div class="news_date"><?php echo $news_short_description;?></div>
+								<div class="news_title"><?php echo $news_full_description;?></div>
+								<div class="news_short_description"><?php echo $news_gallery;?></div>
+								
 						</div>
 				</div>
 				<?php
@@ -132,7 +120,7 @@ function latest_news__detail_shortcode(){
         <?php
 return ob_get_clean();
 }
-add_shortcode('news_detail_shortcode','latest_news__detail_shortcode');
+add_shortcode('news_detail_shortcode','latest_news_detail_shortcode');
 
 
 // Awards Shortcode 
