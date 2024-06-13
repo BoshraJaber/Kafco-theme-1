@@ -10,6 +10,7 @@
 
 
  include get_parent_theme_file_path( 'inc/helpers/helpers.php' );
+ include get_parent_theme_file_path("shortcode/shortcodes.php");
 
 /**
  * Register block styles.
