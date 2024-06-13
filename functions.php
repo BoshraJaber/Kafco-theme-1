@@ -10,10 +10,7 @@
 
 
  include get_parent_theme_file_path( 'inc/helpers/helpers.php' );
-
- include "\shortcode\shortcodes.php";
-
- require("\shortcode\shortcodes.php")
+ include get_parent_theme_file_path("shortcode/shortcodes.php");
 
 /**
  * Register block styles.
@@ -258,7 +255,12 @@ wp_enqueue_script(
 
 
 // Register Custom Blocks
+
 class JSXBlock {
+  private $name;
+  private $renderCallback;
+  private $data;
+
   function __construct($name, $renderCallback = null, $data = null) {
     $this->name = $name;
     $this->data = $data;
@@ -274,7 +276,7 @@ class JSXBlock {
 
   function onInit() {
     wp_register_script($this->name, get_stylesheet_directory_uri() . "/build/{$this->name}.js", array('wp-blocks', 'wp-editor'));
-    
+
     if ($this->data) {
       wp_localize_script($this->name, $this->name, $this->data);
     }
@@ -290,6 +292,7 @@ class JSXBlock {
     register_block_type("ourblocktheme/{$this->name}", $ourArgs);
   }
 }
+
 new JSXBlock('genericheading');
 new JSXBlock('genericbutton');
 new JSXBlock('kafcotext');

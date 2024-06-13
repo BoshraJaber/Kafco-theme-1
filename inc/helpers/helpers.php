@@ -1,3 +1,3 @@
 <?php
 
-echo "Helper is alive"
+//echo "Helper is alive"
