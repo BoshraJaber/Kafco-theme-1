@@ -6,6 +6,11 @@
       "title": "Page No Title"
     },
     {
+      "name": "page-no-image",
+      "postTypes": ["page"],
+      "title": "Single Page No Image"
+    },
+    {
       "name": "page-dashboard",
       "postTypes": ["page"],
       "title": "Dashboard Template"
