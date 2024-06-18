@@ -88,10 +88,10 @@ function latest_news_detail_shortcode(){
 			$news_title = get_field( "news_title" );
 			$news_date = get_field( "news_date" );
 			$news_short_description =  get_field( "news_short_description" );
-			$news_full_description =  get_field( "news_full_description" );
-			$news_gallery = get_field( "news_gallery",$post_id );
+			$news_full_description =  get_field( "news_full_description" );			
 			$post_id = get_the_ID();
 			$pagelink=  get_permalink($post_id);  
+			$news_gallery = get_field( "news_gallery",$post_id );
         ?>
 		<div class="news_container">
 			<h2><?php echo wp_kses_post($news_title); ?></h2>
