@@ -100,16 +100,16 @@ function latest_news_detail_shortcode(){
 			<p><?php echo wp_kses_post($news_full_description); ?></p>
 		</div>
 		<div class="award_gallery_section">
-			<?php if($news_gallery): ?>
-				<div class="award_gallery">
-					<?php foreach( $news_gallery as $image ): ?>								
-						<a class="award_gallery_item" data-fancybox="images" href="<?php echo esc_url($image['url']); ?>" >
-							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" >
-						</a>
-					<?php endforeach; ?>
-				</div>
-			<?php endif; ?>
-		</div>
+        <?php if($news_gallery): ?>
+            <div class="award_gallery">
+                <?php foreach($news_gallery as $image): ?>
+                    <a class="award_gallery_item" data-fancybox="images" href="<?php echo esc_url($image['url']); ?>">
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                    </a>
+                <?php endforeach; ?>
+            </div>
+        <?php endif; ?>
+    </div>
         
         <?php
 return ob_get_clean();
