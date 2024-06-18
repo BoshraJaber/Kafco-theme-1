@@ -32,7 +32,7 @@ html {
     width: 42%;
     background: #F2F2F2;
 }
-.award_gallery_section {
+.award_gallery_section, .news_gallery_section {
     width: 100%;
     max-width: 100% !important;
 }
@@ -46,6 +46,13 @@ html {
     width: 100%;
     object-fit: cover;
 }
+.news_gallery {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
 .news_img img {
     border: 1px solid #ccc;
     border-radius: 0 100px 100px 100px;
@@ -53,7 +60,7 @@ html {
     height: 400px;
     object-fit: cover;
 }
-.award_gallery a {
+.news_gallery a {
     width: 300px;
     height: 200px;
     display: flex;
