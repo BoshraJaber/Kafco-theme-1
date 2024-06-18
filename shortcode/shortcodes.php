@@ -99,7 +99,6 @@ function latest_news_detail_shortcode(){
 		 <p><?php echo $news_date;?></P>
 		 <p><?php echo $news_short_description;?></P>
 		 <p><?php echo $news_full_description;?></P>
-		 <p><?php echo $news_gallery;?></P>
 
 		</div>
 		<div class="award_gallery_section">
