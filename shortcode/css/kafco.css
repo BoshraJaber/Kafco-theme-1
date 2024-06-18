@@ -117,7 +117,18 @@ html {
     text-wrap: unset;
     min-height: 80px;
 }
-
+.news_date_inner{
+    color:#6B6767;
+    font-size: 18px;
+    font-weight: 700;
+}
+.news_container h2{
+    color: #157633;
+    font-size: 28px;
+}.news_content_inner{
+    font-size: 20px;
+    color: #181818;
+}
 .read_more a,
 .inner-cards .read_more {
     text-decoration: none;
