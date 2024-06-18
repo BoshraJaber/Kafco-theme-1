@@ -75,23 +75,29 @@ return ob_get_clean();
 add_shortcode('show_latest_news','latest_news_shortcode');
 
 
-function latest_news_detail_shortcode(){
-	ob_start();
-			$news_title = get_field( "news_title" );
-			$news_date = get_field( "news_date" );
-			$news_short_description =  get_field( "news_short_description" );
-			$news_full_description =  get_field( "news_full_description" );			
-			$post_id = get_the_ID();
-			$pagelink=  get_permalink($post_id);  
-			$news_gallery = get_field( "news_gallery",$post_id );
-        ?>
-		<div class="news_container">
-			<h2><?php echo wp_kses_post($news_title); ?></h2>
-			<p><?php echo wp_kses_post($news_date); ?></p>
-			<p><?php echo wp_kses_post($news_short_description); ?></p>
-			<p><?php echo wp_kses_post($news_full_description); ?></p>
-		</div>
-		<div class="award_gallery_section">
+
+function latest_news_detail_shortcode() {
+    ob_start();
+    
+    // Disable wpautop for this block
+    remove_filter('the_content', 'wpautop');
+    remove_filter('the_content', 'wptexturize');
+    
+    $news_title = get_field("news_title");
+    $news_date = get_field("news_date");
+    $news_short_description = get_field("news_short_description");
+    $news_full_description = get_field("news_full_description");
+    $news_gallery = get_field("news_gallery", $post_id);
+    $post_id = get_the_ID();
+    $pagelink = get_permalink($post_id);
+    ?>
+    <div class="news_container">
+        <h2><?php echo $news_title; ?></h2>
+        <p><?php echo $news_date; ?></p>
+        <p><?php echo $news_short_description; ?></p>
+        <p><?php echo $news_full_description; ?></p>
+    </div>
+    <div class="award_gallery_section">
         <?php if($news_gallery): ?>
             <div class="award_gallery">
                 <?php foreach($news_gallery as $image): ?>
@@ -102,12 +108,15 @@ function latest_news_detail_shortcode(){
             </div>
         <?php endif; ?>
     </div>
-        
-        <?php
-return ob_get_clean();
+    <?php
+    
+    // Re-enable wpautop
+    add_filter('the_content', 'wpautop');
+    add_filter('the_content', 'wptexturize');
+    
+    return ob_get_clean();
 }
-add_shortcode('news_detail_shortcode','latest_news_detail_shortcode');
-
+add_shortcode('news_detail_shortcode', 'latest_news_detail_shortcode');
 
 // Awards Shortcode 
 
