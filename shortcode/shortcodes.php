@@ -93,13 +93,11 @@ function latest_news_detail_shortcode(){
 			$post_id = get_the_ID();
 			$pagelink=  get_permalink($post_id);  
         ?>
-       <div class="news_container">
-	
-         <h2><?php echo $news_short_description;?></h2>
-		 <p><?php echo $news_date;?></P>
-		 <p><?php echo $news_short_description;?></P>
-		 <p><?php echo $news_full_description;?></P>
-
+		<div class="news_container">
+			<h2><?php echo wp_kses_post($news_title); ?></h2>
+			<p><?php echo wp_kses_post($news_date); ?></p>
+			<p><?php echo wp_kses_post($news_short_description); ?></p>
+			<p><?php echo wp_kses_post($news_full_description); ?></p>
 		</div>
 		<div class="award_gallery_section">
 			<?php if($news_gallery): ?>
