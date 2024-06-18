@@ -95,7 +95,7 @@ function latest_news_detail_shortcode($atts, $content = null) {
         <p><?php echo esc_html($news_short_description); ?></p>
         <p><?php echo wp_kses_post($news_full_description); ?></p>
     </div>
-    <div class="award_gallery_section">
+    <div class="news_gallery_section">
         <?php if ($news_gallery): ?>
             <div class="news_gallery">
                 <?php foreach ($news_gallery as $image): ?>
