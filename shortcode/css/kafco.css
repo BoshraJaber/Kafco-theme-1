@@ -35,11 +35,14 @@ html {
 .news_img img {
     border: 1px solid #ccc;
     border-radius: 0 100px 100px 100px;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
 }
 
 .news_img {
     margin-right: 20px;
-    width: 300px;
+    min-width: 300px;
     height: 400px;
     object-fit: cover;
 }
