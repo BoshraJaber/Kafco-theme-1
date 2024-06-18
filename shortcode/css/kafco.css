@@ -29,6 +29,7 @@ html {
     padding: 40px;
     display: flex;
     width: 42%;
+    background: #F2F2F2;
 }
 
 .news_img img {
@@ -48,13 +49,10 @@ html {
 }
 
 .news_date {
-    border: 1px solid #ccc;
     display: inline-block;
-    padding: 10px;
-    border-radius: 20px;
     font-size: 20px;
-    margin-bottom: 20px;
     font-weight: 600;
+    color: #6B6767;
 }
 
 .news_title {
