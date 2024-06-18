@@ -75,7 +75,6 @@ return ob_get_clean();
 add_shortcode('show_latest_news','latest_news_shortcode');
 
 
-
 function latest_news_detail_shortcode($atts, $content = null) {
     global $post;
 
@@ -97,9 +96,9 @@ function latest_news_detail_shortcode($atts, $content = null) {
         <p><?php echo wp_kses_post($news_full_description); ?></p>
     </div>
     <div class="award_gallery_section">
-        <?php if($news_gallery): ?>
+        <?php if ($news_gallery): ?>
             <div class="award_gallery">
-                <?php foreach($news_gallery as $image): ?>
+                <?php foreach ($news_gallery as $image): ?>
                     <a class="award_gallery_item" data-fancybox="images" href="<?php echo esc_url($image['url']); ?>">
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
                     </a>
@@ -108,18 +107,27 @@ function latest_news_detail_shortcode($atts, $content = null) {
         <?php endif; ?>
     </div>
     <?php
-    
-    // Get the buffered content
-    $output = ob_get_clean();
 
-    // Temporarily remove wpautop
-    remove_filter('the_content', 'wpautop');
-    $output = apply_filters('the_content', $output);
-    add_filter('the_content', 'wpautop');
+    $output = ob_get_clean();
 
     return $output;
 }
 add_shortcode('news_detail_shortcode', 'latest_news_detail_shortcode');
+
+
+function disable_wpautop_for_news_detail_shortcode($content) {
+    if (has_shortcode($content, 'news_detail_shortcode')) {
+        // Remove wpautop filter
+        remove_filter('the_content', 'wpautop');
+        // Apply content filters without wpautop
+        $content = apply_filters('the_content', $content);
+        // Re-add wpautop filter
+        add_filter('the_content', 'wpautop');
+    }
+    return $content;
+}
+add_filter('the_content', 'disable_wpautop_for_news_detail_shortcode', 9);
+
 
 
 
