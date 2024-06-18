@@ -42,7 +42,7 @@ html {
     align-items: flex-start;
     flex-direction: row;
 }
-.award_gallery a img {
+.news_gallery a img {
     width: 100%;
     object-fit: cover;
 }
