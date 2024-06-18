@@ -105,7 +105,7 @@ function latest_news_detail_shortcode(){
 		<div class="award_gallery_section">
 			<?php if($news_gallery): ?>
 				<div class="award_gallery">
-					<?php foreach( $award_gallery as $image ): ?>								
+					<?php foreach( $news_gallery as $image ): ?>								
 						<a class="award_gallery_item" data-fancybox="images" >
 							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 						</a>
