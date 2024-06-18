@@ -20,6 +20,7 @@ html {
     align-items: center;
     align-content: center;
     width: 100%;
+    max-width: 100% !important;
 }
 
 .news_box {
@@ -31,7 +32,20 @@ html {
     width: 42%;
     background: #F2F2F2;
 }
-
+.award_gallery_section {
+    width: 100%;
+    max-width: 100% !important;
+}
+.award_gallery {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
+.award_gallery a img {
+    width: 100%;
+    object-fit: cover;
+}
 .news_img img {
     border: 1px solid #ccc;
     border-radius: 0 100px 100px 100px;
@@ -39,7 +53,11 @@ html {
     height: 400px;
     object-fit: cover;
 }
-
+.award_gallery a {
+    width: 300px;
+    height: 200px;
+    display: flex;
+}
 .news_img {
     margin-right: 20px;
     min-width: 300px;

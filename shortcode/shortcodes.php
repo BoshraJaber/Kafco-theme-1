@@ -97,9 +97,9 @@ function latest_news_detail_shortcode($atts, $content = null) {
     </div>
     <div class="award_gallery_section">
         <?php if ($news_gallery): ?>
-            <div class="award_gallery">
+            <div class="news_gallery">
                 <?php foreach ($news_gallery as $image): ?>
-                    <a class="award_gallery_item" data-fancybox="images" href="<?php echo esc_url($image['url']); ?>">
+                    <a class="news_gallery_item" data-fancybox="images" href="<?php echo esc_url($image['url']); ?>">
                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
                     </a>
                 <?php endforeach; ?>
