@@ -90,9 +90,8 @@ function latest_news_detail_shortcode($atts, $content = null) {
 
     ?>
     <div class="news_container">
-        <h2><?php echo esc_html($news_title); ?></h2>
-        <p><?php echo esc_html($news_date); ?></p>
-        <p><?php echo esc_html($news_short_description); ?></p>
+		<p><?php echo esc_html($news_date); ?></p>
+        <h2><?php echo esc_html($news_title); ?></h2>        
         <p><?php echo wp_kses_post($news_full_description); ?></p>
     </div>
     <div class="news_gallery_section">
