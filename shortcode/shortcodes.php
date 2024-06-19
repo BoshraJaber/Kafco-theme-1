@@ -45,10 +45,16 @@ function latest_news_shortcode(){
 				$news_gallery = get_field( "news_gallery" );
 				$post_id = get_the_ID();
 				$pagelink=  get_permalink($post_id);  
+				$logoimg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
+				if($logoimg=="")
+				{
+					//$logoimg ="https://dummyimage.com/180x100/000/fff";
+					$logoimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
+				}
 				?>
 				<div class="news_box">
 						<div class="news_img">
-							<img src="https://dummyimage.com/300x400/23800e/ffffff" alt="img_name">
+							<img src="<?php echo $logoimg;?>" alt="img_name">
 						</div>
 						<div class="news_details">
 								<div class="news_date"><?php echo $news_date;?></div>
@@ -158,7 +164,8 @@ function awards_shortcode(){
 				$logoimg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
 				if($logoimg=="")
 				{
-					$logoimg ="https://dummyimage.com/180x100/000/fff";
+					//$logoimg ="https://dummyimage.com/180x100/000/fff";
+					$logoimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
 				}
 				?>
 				<div class="awards-card">
@@ -376,7 +383,7 @@ function board_members_shortcode(){
 				$personimg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
 				if($personimg=="")
 				{
-					$personimg ="https://dummyimage.com/200x200/000/fff";
+					$personimg ="";
 				}
 				?>
 				<div class="member_section">
@@ -439,7 +446,7 @@ function management_shortcode(){
 				$personimg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
 				if($personimg=="")
 				{
-					$personimg ="https://dummyimage.com/310x390/000/fff";
+					$personimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
 				}
 				?>
 				<div class="member_section">
@@ -484,7 +491,8 @@ function management_shortcode(){
 			  $personimg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
 			  if($personimg=="")
 			  {
-				  $personimg ="https://dummyimage.com/200x200/000/fff";
+				 // $personimg ="https://dummyimage.com/200x200/000/fff";
+				  $personimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
 			  }
 			  ?>
 			  <div class="member_section">
@@ -530,7 +538,8 @@ function management_shortcode(){
 			  $personimg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
 			  if($personimg=="")
 			  {
-				  $personimg ="https://dummyimage.com/200x200/000/fff";
+				  //$personimg ="https://dummyimage.com/200x200/000/fff";
+				  $personimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
 			  }
 			  ?>
 			  <div class="member_section">
@@ -590,7 +599,8 @@ function awards_certificates_shortcode(){
 				$logoimg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
 				if($logoimg=="")
 				{
-					$logoimg ="https://dummyimage.com/180x100/000/fff";
+					//$logoimg ="https://dummyimage.com/180x100/000/fff";
+					$personimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
 				}
 				
 				?>
@@ -628,7 +638,8 @@ function awards_certificates_shortcode(){
 			$award_gallery = get_field("gallery");
 			$logoimg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
 			if($logoimg == ""){
-				$logoimg = "https://dummyimage.com/180x100/000/fff";
+				//$logoimg = "https://dummyimage.com/180x100/000/fff";
+				$logoimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
 			}
 			?>
 			<div class="awards_box" id="award-<?php echo $id_number; ?>">
