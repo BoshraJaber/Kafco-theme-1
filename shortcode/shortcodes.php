@@ -49,7 +49,7 @@ function latest_news_shortcode(){
 				if($logoimg=="")
 				{
 					//$logoimg ="https://dummyimage.com/180x100/000/fff";
-					$logoimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
+					$logoimg ="https://medevword.com//wp-content/themes/Kafco-theme-1/images/kafco_team.jpg";
 				}
 				?>
 				<div class="news_box">
@@ -165,7 +165,7 @@ function awards_shortcode(){
 				if($logoimg=="")
 				{
 					//$logoimg ="https://dummyimage.com/180x100/000/fff";
-					$logoimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
+					$logoimg ="https://medevword.com//wp-content/themes/Kafco-theme-1/images/kafco_team.jpg";
 				}
 				?>
 				<div class="awards-card">
@@ -446,7 +446,7 @@ function management_shortcode(){
 				$personimg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
 				if($personimg=="")
 				{
-					$personimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
+					$personimg ="https://medevword.com//wp-content/themes/Kafco-theme-1/images/kafco_team.jpg";
 				}
 				?>
 				<div class="member_section">
@@ -492,7 +492,7 @@ function management_shortcode(){
 			  if($personimg=="")
 			  {
 				 // $personimg ="https://dummyimage.com/200x200/000/fff";
-				  $personimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
+				  $personimg ="https://medevword.com//wp-content/themes/Kafco-theme-1/images/kafco_team.jpg";
 			  }
 			  ?>
 			  <div class="member_section">
@@ -539,7 +539,7 @@ function management_shortcode(){
 			  if($personimg=="")
 			  {
 				  //$personimg ="https://dummyimage.com/200x200/000/fff";
-				  $personimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
+				  $personimg ="https://medevword.com//wp-content/themes/Kafco-theme-1/images/kafco_team.jpg";
 			  }
 			  ?>
 			  <div class="member_section">
@@ -600,7 +600,7 @@ function awards_certificates_shortcode(){
 				if($logoimg=="")
 				{
 					//$logoimg ="https://dummyimage.com/180x100/000/fff";
-					$personimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
+					$personimg ="https://medevword.com//wp-content/themes/Kafco-theme-1/images/kafco_team.jpg";
 				}
 				
 				?>
@@ -639,7 +639,7 @@ function awards_certificates_shortcode(){
 			$logoimg = get_the_post_thumbnail_url(get_the_ID(),'full');                    
 			if($logoimg == ""){
 				//$logoimg = "https://dummyimage.com/180x100/000/fff";
-				$logoimg ="/wp-content/themes/kafco-theme-1/shortcode/images/kafco_team.png";
+				$logoimg ="https://medevword.com//wp-content/themes/Kafco-theme-1/images/kafco_team.jpg";
 			}
 			?>
 			<div class="awards_box" id="award-<?php echo $id_number; ?>">
