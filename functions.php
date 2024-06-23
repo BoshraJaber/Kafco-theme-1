@@ -238,6 +238,15 @@ function kafco_custom_theme_1_enqueue_styles() {
 		'kafco-custom-theme-1-primary',
 		get_parent_theme_file_uri( 'assets/css/primary.css' )
 	);
+		wp_enqueue_style( 
+		'kafco-custom-theme-1-fancybox.min',
+		get_parent_theme_file_uri( '/shortcode/css/fancybox.min.css' )
+	);
+		wp_enqueue_style( 
+		'kafco-custom-theme-1-fancybox',
+		get_parent_theme_file_uri( '/shortcode/css/fancybox.css' )
+	);
+
 }
 
 

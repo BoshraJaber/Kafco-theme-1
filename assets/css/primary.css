@@ -808,3 +808,8 @@ footer {
 #mega-menu-wrap-max_mega_menu_2 {
     background: transparent;
 }
+
+#mega-menu-wrap-max_mega_menu_2 #mega-menu-max_mega_menu_2>li.mega-menu-item>a.mega-menu-link:hover,
+#mega-menu-wrap-max_mega_menu_2 #mega-menu-max_mega_menu_2>li.mega-menu-item>a.mega-menu-link:focus {
+    background: transparent;
+}
