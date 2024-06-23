@@ -799,6 +799,12 @@ footer {
     .drop-reversed {
         width: 114px !important;
         height: 114px !important;
-        right:0px !important;
+        right: 0px !important;
     }
+}
+
+
+/* Menu */
+#mega-menu-wrap-max_mega_menu_2 {
+    background: transparent;
 }

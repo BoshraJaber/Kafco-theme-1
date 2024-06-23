@@ -7,7 +7,7 @@
     },
     {
       "name": "page-no-image",
-      "postTypes": ["page", "post"],
+      "postTypes": ["post"],
       "title": "Single Page No Image"
     },
     {
