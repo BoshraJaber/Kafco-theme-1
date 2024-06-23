@@ -1,20 +1,20 @@
 <?php
 
 
-add_action( 'wp_enqueue_scripts', 'kafco_shortcode_styles');
-function kafco_shortcode_styles() {
-wp_enqueue_style( 'kacfo-css', get_template_directory_uri() . '/shortcode/css/kafco.css', array());
-}
-add_action( 'wp_enqueue_scripts', 'kafco_fancybox_styles');
-function kafco_fancybox_styles() {
-wp_enqueue_style( 'kacfo-fancybox-css', get_template_directory_uri() . '/shortcode/css/fancybox.min.css', array());
-}
+// add_action( 'wp_enqueue_scripts', 'kafco_shortcode_styles');
+// function kafco_shortcode_styles() {
+// wp_enqueue_style( 'kacfo-css', get_template_directory_uri() . '/shortcode/css/kafco.css', array());
+// }
+// add_action( 'wp_enqueue_scripts', 'kafco_fancybox_styles');
+// function kafco_fancybox_styles() {
+// wp_enqueue_style( 'kacfo-fancybox-css', get_template_directory_uri() . '/shortcode/css/fancybox.min.css', array());
+// }
 
-add_action( 'wp_enqueue_scripts', 'kafco_fancybox_scripts' );
-function kafco_fancybox_scripts() {
-    // Enqueue the JavaScript file
-    wp_enqueue_script( 'kacfo-js', get_template_directory_uri() . '/shortcode/js/fancybox.min.js', array('jquery'), '1.0', true );
-}
+// add_action( 'wp_enqueue_scripts', 'kafco_fancybox_scripts' );
+// function kafco_fancybox_scripts() {
+//     // Enqueue the JavaScript file
+//     wp_enqueue_script( 'kacfo-js', get_template_directory_uri() . '/shortcode/js/fancybox.min.js', array('jquery'), '1.0', true );
+// }
 
 
 // testing
