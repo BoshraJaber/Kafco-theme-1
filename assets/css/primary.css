@@ -55,8 +55,21 @@ header {
     }
 
     .headline--large {
-        text-wrap: wrap;
+        text-wrap: wrap !important;
+        line-height: 1.2;
     }
+
+    .mega-menu-max_mega_menu_2-mobile-open .header-menus {
+        position: fixed;
+        background: black;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        top: 0px;
+        height: 100%;
+        left: 0px;
+    }
+
 }
 
 
