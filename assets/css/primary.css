@@ -389,6 +389,12 @@ body {
     border-radius: 9px;
 }
 
+.icon-btn a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .home-slider-content {
     width: 990px !important;
 }
