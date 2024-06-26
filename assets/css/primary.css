@@ -9,6 +9,12 @@ body {
     color: #181818;
     overflow-x: hidden;
     position: relative;
+    text-align: left;
+}
+
+html[lang="ar"] body,
+html[lang="ar"] p {
+    text-align: right;
 }
 
 img {
@@ -47,7 +53,12 @@ header {
         justify-content: space-between;
         gap: 10px;
     }
+
+    .headline--large {
+        text-wrap: wrap;
+    }
 }
+
 
 @media (min-width: 530px) {
     .p-top-large {
@@ -178,7 +189,6 @@ body {
 
 .our-val-info b {
     font-size: 22px;
-    text-align: left !important;
 }
 
 .our-val-info p {
@@ -412,6 +422,23 @@ body {
     width: 990px !important;
 }
 
+/* Slider Code */
+
+@media (max-width:768px) {
+    .swiper-slide>div {
+        width: 100% !important;
+    }
+
+    .swiper-slide .wp-block-group {
+        margin-left: 0px !important;
+        padding: 0px;
+        padding: 20px 30px !important;
+        border-radius: 12px !important;
+    }
+}
+
+
+
 /* .swiper {
     height: 94vh !important;
 } */
@@ -594,9 +621,10 @@ body {
     font-size: 48px;
     font-weight: 300;
     line-height: 86px;
-    text-align: left;
     text-wrap: nowrap;
 }
+
+
 
 @media (min-width: 530px) {
     .headline--large {
@@ -736,7 +764,6 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: 41px;
-    text-align: left;
 }
 
 html[lang="ar"] .footer-heading {
