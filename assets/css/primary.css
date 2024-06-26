@@ -36,6 +36,19 @@ header {
     padding: 32px 60px 0px;
 }
 
+
+
+@media (max-width:768px) {
+    header {
+        padding: 32px 20px;
+    }
+
+    .top-nav {
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
+
 @media (min-width: 530px) {
     .p-top-large {
         padding-top: 3.5rem;
