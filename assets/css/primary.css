@@ -1,3 +1,9 @@
+:root {
+    --deep-navy: #02264C;
+    --gray-color: #9E9E9E;
+    --gray-light: #D9D9D9;
+}
+
 body {
     background: gray !important;
 }
@@ -507,7 +513,7 @@ body {
 }
 
 .btn--dark-blue {
-    background-color: #02264c;
+    background-color: var(--deep-navy);
 }
 
 .btn--dark-blue:hover {
@@ -904,7 +910,15 @@ footer {
     width: 18px;
     border-radius: 50%;
     border: 1px solid #FFFFFF;
-    background-color: #093550;
+    outline: 1.5px solid var(--gray-light);
+}
+
+.scroll-to-div-wrap ul li:nth-child(odd) em {
+    background-color: var(--deep-navy);
+}
+
+.scroll-to-div-wrap ul li:nth-child(even) em {
+    background-color: var(--gray-color);
 }
 
 .scroll-to-div-wrap ul li {
@@ -930,7 +944,7 @@ footer {
     color: #fff;
     font-family: "Foco Bold", Sans-serif;
     padding: 8px 10px;
-    background-color: #84DC65;
+    background-color: var(--deep-navy);
     border-radius: 7px;
     opacity: 0;
     visibility: hidden;
@@ -939,21 +953,18 @@ footer {
     line-height: 1.15;
 }
 
-.scroll-to-div-wrap ul li span::after {
-    position: absolute;
-    content: '';
-    right: -11px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 12px;
-    height: 11px;
-    background-image: url(//kipic.com.kw/wp-content/themes/hello-elementor-child/assets/images/scroll-arrow.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 
 .scroll-to-div-wrap ul li:hover span {
     opacity: 1;
     visibility: visible;
+}
+
+html[lang="ar"] .scroll-to-div-wrap,
+.home-scroll-block {
+    left: 20px;
+    right: auto;
+}
+
+html[lang="ar"] .scroll-to-div-wrap ul {
+    padding-left: 35px;
 }
