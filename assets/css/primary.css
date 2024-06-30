@@ -973,6 +973,7 @@ html[lang="ar"] .scroll-to-div-wrap ul {
 html[lang="ar"] .scroll-to-div-wrap ul li span {
     left: calc(100% + 15px);
     right: unset;
+    border-radius: 14px 14px 14px 0px;
 }
 
 /* Animation */

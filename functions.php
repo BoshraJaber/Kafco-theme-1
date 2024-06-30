@@ -246,6 +246,14 @@ function kafco_custom_theme_1_enqueue_styles() {
         'kafco-custom-theme-1-fancybox',
         get_parent_theme_file_uri( 'shortcode/css/fancybox.css' )
     );
+	// new
+	wp_register_style('fancybox', get_stylesheet_directory_uri() . '/assets/css/fancybox.css', array());
+    wp_enqueue_style('fancybox');
+
+wp_register_script('fancybox', get_stylesheet_directory_uri() . '/assets/js/fancybox.js', array('jquery'), time());
+    wp_enqueue_script('fancybox');
+wp_register_script('jquery-ui', get_stylesheet_directory_uri() . '/assets/js/jquery-ui.js', array('jquery'));
+    wp_enqueue_script('jquery-ui');
 
 }
 
