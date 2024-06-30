@@ -247,7 +247,7 @@ function kafco_custom_theme_1_enqueue_styles() {
         get_parent_theme_file_uri( 'shortcode/css/fancybox.css' )
     );
 	// new
-	wp_register_style('fancybox', get_stylesheet_directory_uri() . '/assets/css/fancybox.css', array());
+	wp_register_style('fancybox', get_stylesheet_directory_uri() . '/shortcode/css/kafco.css', array());
     wp_enqueue_style('fancybox');
 
 wp_register_script('fancybox', get_stylesheet_directory_uri() . '/assets/js/fancybox.js', array('jquery'), time());
